@@ -13,6 +13,7 @@ export default function App() {
   const [role, setRole] = useState("");
   const [diagnosticJson, setDiagnosticJson] = useState("");
   const [userId, setUserId] = useState(null);
+  const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || "${apiBaseUrl}";
 
   useEffect(() => {
     // Bootstrap user so the rest of the API can rely on `user_id` existing.
@@ -21,7 +22,7 @@ export default function App() {
       try {
         const email = "demo@example.com";
         const payload = { email, name: "Demo User" };
-        const res = await fetch("http://127.0.0.1:8001/api/v1/users/ensure", {
+        const res = await fetch("${apiBaseUrl}/api/v1/users/ensure", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload),
@@ -90,7 +91,7 @@ export default function App() {
         formData.append("jd_file", jdBlob, "jd.txt");
       }
 
-      const response = await fetch("http://127.0.0.1:8001/api/v1/analyze", {
+      const response = await fetch("${apiBaseUrl}/api/v1/analyze", {
         method: "POST",
         body: formData,
       });
