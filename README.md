@@ -41,3 +41,8 @@ Local dependency folders, Python virtual environments, OS files, secrets, and ge
 
 ## Status
 Hackathon/portfolio project under active development.
+
+
+---
+
+**Project documentation:** [Contributing](CONTRIBUTING.md) · [Security](SECURITY.md)
