@@ -1,5 +1,7 @@
 # AI Resume Review
 
+[![CI](https://github.com/rajaryan1111/AI_resume_review/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/rajaryan1111/AI_resume_review/actions/workflows/ci.yml)
+
 AI-assisted resume and job-description analysis interface that compares candidate information against a target role and surfaces skills, gaps, diagnostics, and a visual skill graph.
 
 ## Features
